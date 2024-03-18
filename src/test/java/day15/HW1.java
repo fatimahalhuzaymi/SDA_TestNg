@@ -10,7 +10,18 @@ import org.testng.asserts.SoftAssert;
 
 
     public class HW1 extends TestBase {
+        /*
+ Test Case1: Positive Login Test
 
+ Open page https://practicetestautomation.com/practice-test-login/
+
+ Type username student into Username field
+ Type password Password123 into Password field
+ Click Submit button.
+ Verify new page URL contains practicetestautomation.com/logged-in-successfully/
+ Verify new page contains expected text ('Congratulations' or 'successfully logged in')
+ Verify button Log out is displayed on the new page.
+      */
         By username = By.id("username");
         By password = By.id("password");
         By submit = By.id("submit");
@@ -20,18 +31,7 @@ import org.testng.asserts.SoftAssert;
         @Test
         public void harsAssertion() {
 
-            /*
-Test Case1: Positive Login Test
 
-Open page https://practicetestautomation.com/practice-test-login/
-
-Type username student into Username field
-Type password Password123 into Password field
-Click Submit button.
-Verify new page URL contains practicetestautomation.com/logged-in-successfully/
-Verify new page contains expected text ('Congratulations' or 'successfully logged in')
-Verify button Log out is displayed on the new page.
-     */
 
             driver.get("https://practicetestautomation.com/practice-test-login/");
             driver.findElement(username).sendKeys("student");

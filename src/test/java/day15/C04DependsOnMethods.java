@@ -21,7 +21,6 @@ public class C04DependsOnMethods {
     @Test(dependsOnMethods = {"parkCar"}) // This test depends on the successful execution of the "parkCar" test
     void stopCar(){
         System.out.println("stop the car");
-
     }
 
     @Test(dependsOnMethods = {"driveCar"}) // This test depends on the successful execution of the "driveCar" test
